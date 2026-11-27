@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wanderlane – Travel &amp; Tourism</title>
+<meta name="description" content="Handpicked trips, honest prices and local guides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="logo">Wanderlane</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+    <label for="menu-toggle" class="menu-btn"><span></span></label>
+    <nav class="menu">
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a>
+      <a href="#why-us">Why us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn btn-small">Plan my trip</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Go somewhere you will<br>still talk about next year.</h1>
+      <p>Handpicked trips, honest prices and local guides who know the quiet corners.</p>
+      <form class="finder" id="finder">
+        <label>Where to
+          <select id="f-dest">
+            <option value="all">Anywhere</option><option value="Bali">Bali, Indonesia</option><option value="Kyoto">Kyoto, Japan</option>
+            <option value="Santorini">Santorini, Greece</option><option value="Swiss Alps">Swiss Alps</option><option value="Kerala">Kerala, India</option><option value="Marrakech">Marrakech, Morocco</option>
+          </select>
+        </label>
+        <label>Month
+          <select id="f-month">
+            <option>Any month</option><option>January</option><option>March</option><option>May</option>
+            <option>July</option><option>September</option><option>November</option>
+          </select>
+        </label>
+        <label>Travellers
+          <select><option>1</option><option selected>2</option><option>3–4</option><option>5+</option></select>
+        </label>
+        <button class="btn" type="submit">Find trips</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="stats"><div class="container stats-grid">
+    <div><b>12,000+</b><span>happy travellers</span></div>
+    <div><b>40</b><span>destinations</span></div>
+    <div><b>4.8/5</b><span>average rating</span></div>
+    <div><b>24/7</b><span>trip support</span></div>
+  </div></section>
+
+  <section id="destinations" class="section">
+    <div class="container">
+      <h2>Popular destinations</h2>
+      <p class="lead">Six places our travellers keep coming back to talk about.</p>
+      <div class="filters" role="group" aria-label="Filter destinations">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="beach">Beach</button>
+        <button class="chip" data-filter="culture">Culture</button>
+        <button class="chip" data-filter="mountain">Mountains</button>
+      </div>
+      <p id="no-results" class="lead" hidden>No trips match that choice. Try "Anywhere" or another filter.</p>
+      <div class="grid" id="grid">
+        <article class="card" data-name="Bali" data-cat="beach culture"><div class="thumb t1">Bali</div><div class="card-body"><h3>Bali, Indonesia</h3><p>Rice terraces, temple mornings and surf-ready beaches.</p><span class="best">Best time: Nov–Apr</span><span class="price">From $780</span><a href="#book" class="link" data-pick="Bali">Book this trip</a></div></article>
+        <article class="card" data-name="Kyoto" data-cat="culture"><div class="thumb t2">Kyoto</div><div class="card-body"><h3>Kyoto, Japan</h3><p>Quiet shrines, tea houses and bamboo-lined walks.</p><span class="best">Best time: Mar–May</span><span class="price">From $1,150</span><a href="#book" class="link" data-pick="Kyoto">Book this trip</a></div></article>
+        <article class="card" data-name="Santorini" data-cat="beach"><div class="thumb t3">Santorini</div><div class="card-body"><h3>Santorini, Greece</h3><p>White villages above a deep blue caldera.</p><span class="best">Best time: May–Sep</span><span class="price">From $990</span><a href="#book" class="link" data-pick="Santorini">Book this trip</a></div></article>
+        <article class="card" data-name="Swiss Alps" data-cat="mountain"><div class="thumb t4">Alps</div><div class="card-body"><h3>Swiss Alps</h3><p>Scenic trains, mountain huts and lakeside towns.</p><span class="best">Best time: Jun–Sep</span><span class="price">From $1,320</span><a href="#book" class="link" data-pick="Swiss Alps">Book this trip</a></div></article>
+        <article class="card" data-name="Kerala" data-cat="beach culture"><div class="thumb t5">Kerala</div><div class="card-body"><h3>Kerala, India</h3><p>Houseboats, spice hills and slow backwater days.</p><span class="best">Best time: Oct–Mar</span><span class="price">From $540</span><a href="#book" class="link" data-pick="Kerala">Book this trip</a></div></article>
+        <article class="card" data-name="Marrakech" data-cat="culture"><div class="thumb t6">Marrakech</div><div class="card-body"><h3>Marrakech, Morocco</h3><p>Lively souks, riads and desert sunsets.</p><span class="best">Best time: Mar–May</span><span class="price">From $720</span><a href="#book" class="link" data-pick="Marrakech">Book this trip</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="section alt">
+    <div class="container">
+      <h2>Choose your pace</h2>
+      <p class="lead">Every package includes stays, local transfers and a 24/7 support line.</p>
+      <div class="packages">
+        <div class="pack">
+          <h3>Weekend Escape</h3>
+          <p class="big">$320<small> / person</small></p>
+          <ul><li>2 nights in a boutique stay</li><li>Breakfast daily</li><li>One guided local walk</li></ul>
+          <a href="#contact" class="btn btn-outline">Ask about this</a>
+        </div>
+        <div class="pack featured">
+          <h3>Explorer Week</h3>
+          <p class="big">$960<small> / person</small></p>
+          <ul><li>7 nights across 2 locations</li><li>Breakfast and 3 dinners</li><li>Airport transfers</li><li>Two guided day trips</li></ul>
+          <a href="#contact" class="btn">Ask about this</a>
+        </div>
+        <div class="pack">
+          <h3>Grand Journey</h3>
+          <p class="big">$2,100<small> / person</small></p>
+          <ul><li>14 nights, multi-stop route</li><li>All internal transport</li><li>Private local guide</li></ul>
+          <a href="#contact" class="btn btn-outline">Ask about this</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="section">
+    <div class="container why">
+      <div>
+        <h2>Travel planned by people who have been there</h2>
+        <p class="lead">We keep groups small and itineraries loose, so you have time to wander.</p>
+      </div>
+      <ul class="points">
+        <li><strong>Clear pricing.</strong> What you see is what you pay. No resort fees added later.</li>
+        <li><strong>Local guides.</strong> Born and raised in the places they show you.</li>
+        <li><strong>Flexible bookings.</strong> Change your dates free up to 14 days before departure.</li>
+        <li><strong>Real support.</strong> A person answers, any hour, while you are away.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="reviews" class="section">
+    <div class="container">
+      <h2>What travellers say</h2>
+      <p class="lead">Real feedback from recent trips.</p>
+      <div class="reviews">
+        <blockquote><p>The Kyoto guide took us to tea houses we would never have found. Easily our best trip.</p><cite>Ananya R., Chennai</cite></blockquote>
+        <blockquote><p>Clear prices, quick replies and a driver who was waiting exactly where promised.</p><cite>Mark T., Leeds</cite></blockquote>
+        <blockquote><p>Our Kerala houseboat week was relaxed from the first hour to the last.</p><cite>Priya &amp; Sam, Singapore</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="section alt">
+    <div class="container contact">
+      <div>
+        <h2>Book your trip</h2>
+        <p class="lead">Choose your dates and group size. We confirm availability by email before you pay anything.</p>
+        <div id="quote" class="quote" aria-live="polite">Pick a package and group size to see an estimate.</div>
+      </div>
+      <form id="booking" class="form" action="mailto:hello@wanderlane.example" method="post" enctype="text/plain">
+        <label>Destination
+          <select id="b-dest" name="destination" required>
+            <option value="">Choose a destination</option>
+            <option>Bali</option><option>Kyoto</option><option>Santorini</option><option>Swiss Alps</option><option>Kerala</option><option>Marrakech</option>
+          </select></label>
+        <label>Package
+          <select id="b-pack" name="package" required>
+            <option value="">Choose a package</option>
+            <option value="320">Weekend Escape ($320)</option>
+            <option value="960">Explorer Week ($960)</option>
+            <option value="2100">Grand Journey ($2,100)</option>
+          </select></label>
+        <div class="row">
+          <label>Start date<input type="date" id="b-date" name="date" required></label>
+          <label>Travellers<input type="number" id="b-guests" name="travellers" min="1" max="12" value="2" required></label>
+        </div>
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <button class="btn" type="submit">Request booking</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="container faq-wrap">
+      <div><h2>Good to know</h2><p class="lead">Quick answers before you book.</p></div>
+      <div class="faq">
+        <details><summary>Can I change my dates?</summary><p>Yes. Dates can be changed free of charge up to 14 days before departure.</p></details>
+        <details><summary>Do I need a visa?</summary><p>It depends on your passport. We send a visa checklist for your destination once you book.</p></details>
+        <details><summary>Is travel insurance included?</summary><p>Not by default, but we strongly recommend it and can suggest providers.</p></details>
+        <details><summary>How do I pay?</summary><p>A 20% deposit confirms your booking. The balance is due 30 days before you travel.</p></details>
+        <details><summary>Can you plan a custom trip?</summary><p>Yes. Use the contact form below and describe what you have in mind.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container contact">
+      <div>
+        <h2>Tell us where you want to go</h2>
+        <p class="lead">Send a few details and we will reply with a suggested route within one working day.</p>
+        <p class="contact-info">hello@wanderlane.example<br>+91 98765 43210</p>
+      </div>
+      <form action="mailto:hello@wanderlane.example" method="post" enctype="text/plain" class="form">
+        <label>Your name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Destination<input type="text" name="destination" placeholder="e.g. Kyoto in November"></label>
+        <label>Anything we should know?<textarea name="message" rows="4"></textarea></label>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<section class="newsletter"><div class="container news">
+  <div><h3>Get travel deals by email</h3><p>One short email a month. Unsubscribe any time.</p></div>
+  <form id="news" class="news-form"><label class="sr" for="n-email">Email address</label><input id="n-email" type="email" placeholder="you@example.com" required><button class="btn" type="submit">Subscribe</button></form>
+</div><p id="news-msg" class="news-msg" role="status"></p></section>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <span class="logo">Wanderlane</span>
+    <span><a href="#faq">FAQ</a> &nbsp; <a href="#contact">Contact</a> &nbsp; Privacy &nbsp; Terms</span>
+    <span>&copy; 2026 Wanderlane Travel</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="float wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">Chat</a>
+<a href="#top" class="float up" aria-label="Back to top">&uarr;</a>
+<script src="script.js"></script>
+</body>
+</html>
